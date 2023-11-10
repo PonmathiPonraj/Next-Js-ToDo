@@ -28,8 +28,7 @@ export default function Home() {
         todo._id === id ? { ...todo, completed: !todo.completed } : todo
       )
     );
-  };
-  
+  };  
 
   const deleteTodo = async (id) => {
     // Delete todo from the server

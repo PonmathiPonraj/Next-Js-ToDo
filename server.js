@@ -33,12 +33,13 @@ app.post('/api/todos', async (req, res) => {
 });
 
 app.put('/api/todos/:id', async (req, res) => {
-  const { id } = req.params;
-  const todo = await Todo.findById(id);
-  todo.completed = !todo.completed;
-  await todo.save();
-  res.json(todo);
+    const { id } = req.params;
+    const todo = await Todo.findById(id);
+    todo.completed = !todo.completed;
+    await todo.save();
+    res.json(todo);
 });
+  
 
 app.delete('/api/todos/:id', async (req, res) => {
   const { id } = req.params;

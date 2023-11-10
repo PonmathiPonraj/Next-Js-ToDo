@@ -22,7 +22,6 @@ export default function Home() {
   };
 
   const toggleTodo = async (id) => {
-    // Toggle todo completion on the server
     const response = await axios.put(`/api/todos/${id}`);
     setTodos((prevTodos) =>
       prevTodos.map((todo) =>
@@ -30,6 +29,7 @@ export default function Home() {
       )
     );
   };
+  
 
   const deleteTodo = async (id) => {
     // Delete todo from the server

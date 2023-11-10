@@ -7,10 +7,11 @@ const PORT = process.env.PORT || 3001;
 
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb://localhost/todo-list', {
+mongoose.connect('mongodb+srv://ponmathittl:fFI6LTEYs2VQEluk@todolist.pnhjdjq.mongodb.net/?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
+
 
 const todoSchema = new mongoose.Schema({
   task: String,
